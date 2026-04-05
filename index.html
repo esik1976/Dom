@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DomVista | Продажа недвижимости</title>
+  <meta
+    name="description"
+    content="Современный сайт по продаже квартир, домов и коммерческой недвижимости."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#top">DomVista</a>
+      <div class="nav-links">
+        <a href="#catalog">Объекты</a>
+        <a href="#services">Услуги</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+      </div>
+      <a class="nav-phone" href="tel:+77000000000">+7 700 000 00 00</a>
+    </nav>
+
+    <section class="hero-content" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Продажа недвижимости в Казахстане</p>
+        <h1>Находим объекты, которые выглядят как правильное решение, а не компромисс.</h1>
+        <p class="hero-text">
+          Квартиры, дома, пентхаусы и коммерческие помещения с прозрачной сделкой,
+          сильной подачей и быстрым выходом на покупателя.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Смотреть каталог</a>
+          <a class="button button-secondary" href="#contact">Оставить заявку</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <p class="panel-label">Подбор за 60 секунд</p>
+        <form class="quick-form" id="quick-form">
+          <label>
+            Тип недвижимости
+            <select name="type">
+              <option value="all">Любой</option>
+              <option value="apartment">Квартира</option>
+              <option value="house">Дом</option>
+              <option value="commercial">Коммерция</option>
+            </select>
+          </label>
+          <label>
+            Бюджет
+            <select name="price">
+              <option value="all">Любой</option>
+              <option value="0-30000000">До 30 млн ₸</option>
+              <option value="30000000-60000000">30–60 млн ₸</option>
+              <option value="60000000-999999999">От 60 млн ₸</option>
+            </select>
+          </label>
+          <label>
+            Город
+            <select name="city">
+              <option value="all">Любой</option>
+              <option value="Алматы">Алматы</option>
+              <option value="Астана">Астана</option>
+              <option value="Шымкент">Шымкент</option>
+            </select>
+          </label>
+          <button class="button button-primary" type="submit">Показать варианты</button>
+        </form>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="metrics">
+      <article>
+        <strong>240+</strong>
+        <span>объектов в продаже</span>
+      </article>
+      <article>
+        <strong>12 дней</strong>
+        <span>средний срок сделки</span>
+      </article>
+      <article>
+        <strong>94%</strong>
+        <span>клиентов приходят по рекомендации</span>
+      </article>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="section-heading">
+        <p class="eyebrow">Каталог</p>
+        <h2>Выбранные объекты</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">Все</button>
+        <button class="filter-chip" data-filter="apartment">Квартиры</button>
+        <button class="filter-chip" data-filter="house">Дома</button>
+        <button class="filter-chip" data-filter="commercial">Коммерция</button>
+      </div>
+
+      <div class="listing-grid" id="listing-grid">
+        <article class="listing-card" data-type="apartment" data-city="Алматы" data-price="28500000">
+          <div class="listing-image image-one"></div>
+          <div class="listing-body">
+            <p class="listing-meta">Алматы • 68 м² • 2 комнаты</p>
+            <h3>Квартира с террасой у парка</h3>
+            <p>Светлая планировка, дизайнерская кухня, панорамные окна, тихий двор.</p>
+            <div class="listing-footer">
+              <strong>28.5 млн ₸</strong>
+              <button class="ghost-button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card" data-type="house" data-city="Астана" data-price="79000000">
+          <div class="listing-image image-two"></div>
+          <div class="listing-body">
+            <p class="listing-meta">Астана • 210 м² • 2 этажа</p>
+            <h3>Современный дом в закрытом квартале</h3>
+            <p>Участок 8 соток, гараж на 2 авто, отдельный кабинет и каминная зона.</p>
+            <div class="listing-footer">
+              <strong>79 млн ₸</strong>
+              <button class="ghost-button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card" data-type="commercial" data-city="Шымкент" data-price="54000000">
+          <div class="listing-image image-three"></div>
+          <div class="listing-body">
+            <p class="listing-meta">Шымкент • 124 м² • Street retail</p>
+            <h3>Коммерческое помещение на первой линии</h3>
+            <p>Высокий трафик, витринные окна, отдельный вход и готовые документы.</p>
+            <div class="listing-footer">
+              <strong>54 млн ₸</strong>
+              <button class="ghost-button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card" data-type="apartment" data-city="Астана" data-price="43500000">
+          <div class="listing-image image-four"></div>
+          <div class="listing-body">
+            <p class="listing-meta">Астана • 92 м² • 3 комнаты</p>
+            <h3>Семейная квартира рядом со школой</h3>
+            <p>Новый дом, отдельная гардеробная, тёплые полы и вид на город.</p>
+            <div class="listing-footer">
+              <strong>43.5 млн ₸</strong>
+              <button class="ghost-button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Услуги</p>
+        <h2>Не просто каталог, а полноценная воронка продаж</h2>
+      </div>
+      <div class="service-grid">
+        <article>
+          <h3>Продажа объектов</h3>
+          <p>Постановка цены, фото-подача, реклама и переговоры до финальной сделки.</p>
+        </article>
+        <article>
+          <h3>Подбор для покупателей</h3>
+          <p>Фильтрация по бюджету, району и стилю жизни без потери времени на шум.</p>
+        </article>
+        <article>
+          <h3>Юридическое сопровождение</h3>
+          <p>Проверка документов, договоры, безопасные расчёты и контроль сроков.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-card">
+        <p class="eyebrow">О компании</p>
+        <h2>Сайт, который можно развивать до агентства, маркетплейса или CRM-витрины.</h2>
+        <p>
+          Этот стартовый макет уже включает главную структуру для бизнеса недвижимости:
+          оффер, каталог, фильтрацию и форму заявки. Следующий шаг можно сделать в сторону
+          реальной базы объектов, админ-панели, карты и интеграции с WhatsApp или CRM.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Заявка</p>
+        <h2>Оставьте контакты, и мы соберём подборку под ваш запрос</h2>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <label>
+          Ваше имя
+          <input type="text" name="name" placeholder="Например, Айдар" required>
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" placeholder="+7 777 123 45 67" required>
+        </label>
+        <label>
+          Что ищете
+          <textarea name="message" rows="4" placeholder="Квартира в Алматы до 45 млн ₸"></textarea>
+        </label>
+        <button class="button button-primary" type="submit">Отправить заявку</button>
+        <p class="form-note" id="form-note" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>DomVista</p>
+    <p>Продажа недвижимости с понятной подачей и быстрым запуском.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
