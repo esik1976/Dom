@@ -282,6 +282,77 @@ main,
   margin-bottom: 24px;
 }
 
+.featured-listing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 22px;
+  margin-bottom: 28px;
+  padding: 22px;
+  border-radius: 28px;
+  backdrop-filter: blur(14px);
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow);
+}
+
+.featured-gallery {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+  min-height: 380px;
+}
+
+.featured-photo {
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-photo-main {
+  grid-row: 1 / span 2;
+  background-image:
+    linear-gradient(135deg, rgba(30, 26, 23, 0.12), transparent),
+    url("foto/WhatsApp%20Image%202026-04-05%20at%2016.52.49.jpeg");
+}
+
+.featured-photo-side-one {
+  background-image:
+    linear-gradient(135deg, rgba(30, 26, 23, 0.12), transparent),
+    url("foto/WhatsApp%20Image%202026-04-05%20at%2016.52.49%20(1).jpeg");
+}
+
+.featured-photo-side-two {
+  background-image:
+    linear-gradient(135deg, rgba(30, 26, 23, 0.12), transparent),
+    url("foto/WhatsApp%20Image%202026-04-05%20at%2016.52.49%20(2).jpeg");
+}
+
+.featured-content {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 8px 8px 8px 0;
+}
+
+.featured-content h3 {
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  font-family: "Prata", serif;
+}
+
+.featured-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.featured-meta {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
 .filter-chip {
   padding: 12px 18px;
   border-radius: 999px;
@@ -410,6 +481,7 @@ main,
 }
 
 @media (max-width: 960px) {
+  .featured-listing,
   .hero-content,
   .listing-grid,
   .service-grid,
@@ -427,6 +499,15 @@ main,
   .nav-links {
     flex-wrap: wrap;
     gap: 14px;
+  }
+
+  .featured-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 220px);
+  }
+
+  .featured-photo-main {
+    grid-row: auto;
   }
 }
 
