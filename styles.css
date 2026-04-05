@@ -353,6 +353,12 @@ main,
   color: var(--accent-dark);
 }
 
+.featured-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
 .filter-chip {
   padding: 12px 18px;
   border-radius: 999px;
