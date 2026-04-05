@@ -51,8 +51,8 @@ contactForm?.addEventListener("submit", (event) => {
   const name = String(data.get("name") || "").trim();
 
   formNote.textContent = name
-    ? `${name}, заявка принята. Следующий шаг — подключить отправку в WhatsApp, Telegram или CRM.`
-    : "Заявка принята. Следующий шаг — подключить отправку в WhatsApp, Telegram или CRM.";
+    ? `${name}, jūsų užklausa gauta. Kitas žingsnis - prijungti siuntimą į el. paštą, WhatsApp arba CRM.`
+    : "Jūsų užklausa gauta. Kitas žingsnis - prijungti siuntimą į el. paštą, WhatsApp arba CRM.";
 
   contactForm.reset();
 });
